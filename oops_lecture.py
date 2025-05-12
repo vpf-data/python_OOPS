@@ -1,6 +1,8 @@
 
 class Student:
-    ...
+    def __init__(self,name,house):
+        self.name=name
+        self.house=house
 
 def main():
 
@@ -8,10 +10,9 @@ def main():
     print(f"{wizard.name} is in {wizard.house}")
 
 def get_student():
-    student=Student()
-
-    student.name = input("Enter name: ").lower()
-    student.house= input("Enter house: ").lower()
+    name = input("Enter name: ").lower()
+    house= input("Enter house: ").lower()
+    student=Student(name,house)
     return student
 if __name__ =="__main__":
     main()
