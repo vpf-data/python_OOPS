@@ -1,14 +1,18 @@
+
+class Student:
+    ...
+
 def main():
 
-    student=get_student()
-    if student["name"]=="padma":
-        student["house"]="ravenclaw"
-    print(f"{student['name']} is in {student['house']}")
+    wizard=get_student()
+    print(f"{wizard.name} is in {wizard.house}")
 
 def get_student():
-    name = input("Enter name: ").lower()
-    house= input("Enter house: ").lower()
-    return {"name":name,"house":house}
+    student=Student()
+
+    student.name = input("Enter name: ").lower()
+    student.house= input("Enter house: ").lower()
+    return student
 if __name__ =="__main__":
     main()
 
