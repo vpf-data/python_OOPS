@@ -9,6 +9,17 @@ class Student:
 
     #getter
     @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self,name):
+        if not name:
+            raise ValueError("Missing name")
+        self._name = name
+
+    #getter
+    @property
     def house(self):
         return self._house
     #setter
