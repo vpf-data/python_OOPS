@@ -1,18 +1,24 @@
 
 class Student:
     def __init__(self,name,house):
-        if not name:
-            raise ValueError("Missing name")
-        if house not in["gryffindor","hufflepuff","ravenclaw","slytherin"]:
-            raise ValueError("Invalid House")
         self.name=name
         self.house=house
 
     def __str__(self):
         return f"{self.name} is from {self.house}"
 
-def main():
+    #getter
+    @property
+    def house(self):
+        return self._house
+    #setter
+    @house.setter
+    def house(self,house):
+        if house not in ["gryffindor","hufflepuff","ravenClaw","slytherin"]:
+            raise ValueError("Invalid House")
+        self._house =house
 
+def main():
     wizard=get_student()
     print(wizard)
 
